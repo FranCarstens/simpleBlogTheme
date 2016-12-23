@@ -3,18 +3,18 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
-	sassGlobbing = require('node-sass-globbing')
+	sassGlobbing = require('node-sass-globbing'),
 	plumber = require('gulp-plumber'),
 	browserSync = require('browser-sync'),
 	cssmin = require('gulp-cssmin')
 
 var sass_config = {
-	importer: importer,
+	importer: sassGlobbing,
 	includePaths: [
 	'node_modules/breakpoint-sass/stylesheets/',
 	'node_modules/compass-mixins/lib/',
 	'node_modules/singularitygs/stylesheets/'
-	'node_modules/singularity-extras/stylesheets/'
+	// 'node_modules/singularity-extras/stylesheets/'
 	]
 }
 
