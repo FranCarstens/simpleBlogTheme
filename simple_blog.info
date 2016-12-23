@@ -1,0 +1,23 @@
+name = Simple Blog
+description = A minimal, responsive blog theme with code view.
+core = 7.x
+engine = phptemplate
+
+; -- STYLESHEETS --
+stylesheets[all][] = css/styles.css
+
+; -- SCRIPTS --
+
+; -- REGIONS --
+
+regions[help] = 'Help'
+regions[header] = 'Header'
+regions[navigation] = 'Navigation'
+regions[content] = 'Content'
+regions[footer] = 'Footer'
+
+; -- THEME SETTINGS --
+; - SOCIAL LINKS
+; settings[social_facebook] = 'https://www.facebook.com'
+; settings[social_twitter] = 'https://twitter.com'
+; settings[social_github] = 'https://github.com'
