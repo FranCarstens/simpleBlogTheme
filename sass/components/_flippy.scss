@@ -1,0 +1,27 @@
+.region-content {
+	ul.flippy {
+		text-align: right;
+		width: 25%;
+		float: right;
+		padding: 0;
+		li {
+			padding: 0;
+			display: inline-block;
+		}
+		a, a::before {
+			width: $horz-spacing;
+			height: $vert-spacing;
+			display:inline-block;
+			overflow: hidden;
+			text-align: center;
+			line-height: $vert-spacing;
+			font-size: 0.75rem;
+		}
+		.prev a {
+			@include icon('before', true, 'backward')
+		}
+		.next a {
+			@include icon('before', true, 'forward')
+		}
+	}
+}

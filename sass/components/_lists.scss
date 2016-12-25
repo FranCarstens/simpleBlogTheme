@@ -1,0 +1,20 @@
+.field-name-body {
+	ul {
+		li {
+			padding-left: $horz-spacing;
+			@include icon('before', true, 'dash')
+			&::before {
+				width: $horz-spacing;
+				text-align: center;
+				display: inline-block;
+				color: lighten($text, 25);
+			}
+		}
+	}
+
+	ol {
+		li {
+
+		}
+	}
+}

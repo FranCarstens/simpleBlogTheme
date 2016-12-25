@@ -1,0 +1,21 @@
+#help {
+	max-width: 768px;
+	margin: 0 auto;
+	#breadcrumb {
+		display: none;
+	}
+	.breadcrumb {
+		font-weight: 700;
+		@include font-size(0.7rem);
+		padding: $vert-spacing 0;
+		@include icon('before', true, 'location');
+		&::before {
+			width: $horz-spacing;
+			text-align: center;
+			display: inline-block;
+		}
+		a {
+			line-height: $vert-spacing;
+		}
+	}
+}

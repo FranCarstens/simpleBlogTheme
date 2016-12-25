@@ -1,0 +1,22 @@
+ul.tabs.primary {
+	border-bottom: 1px solid $text;
+	li {
+		display: inline-block;
+
+	}
+	a {
+		height: 2*$vert-spacing;
+		padding: 0 0.5*$horz-spacing;
+		line-height: 3*$vert-spacing;
+		margin-right: 0.5*$horz-spacing;
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		display: inline-block;
+		border: 1px dashed $text;
+	}
+	a.active, a:hover {
+		border: 1px solid $text;
+	}
+
+}
