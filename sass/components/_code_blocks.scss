@@ -1,0 +1,24 @@
+pre.prettyprinted {
+	background-color: $bg;
+	padding: $vert-spacing 0;
+	code {
+		padding: $vert-spacing;
+		display: block;
+		background-color: $text;
+		color: $highlight;
+		margin-bottom: $vert-spacing;
+	}
+}
+code {
+	color: $highlight;
+}
+
+.node-teaser {
+	code {
+		height: (5*$vert-spacing);
+		overflow: scroll;
+	}
+}
+.node-blog {
+
+}

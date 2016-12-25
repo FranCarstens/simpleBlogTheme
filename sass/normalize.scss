@@ -1,0 +1,36 @@
+// Import the legacy variables (relevant for controlling compass-normalize).
+@import "variables/**/*";
+
+// Generate normalize.css.
+// @import "normalize";
+
+// Use 'border-box' for the box model.
+// @import "toolkit/border-box";
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+.menu .leaf, .menu .collapsed, ul {
+	list-style-image: none;
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+.menu, ol, ul {
+	padding: 0;
+}
+dl, menu, ol, ul {
+	margin: 0;
+}
+ul.breadcrumb {
+
+}

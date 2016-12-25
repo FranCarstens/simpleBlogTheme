@@ -1,0 +1,96 @@
+// @include keyframes(circles) {
+// 	0% { -webkit-transform: rotate(0);}
+// 	100% { -webkit-transform: rotate(359deg);}
+// }
+// @include keyframes(progress) {
+	
+// 	0% { background-position: 0% 50%; }
+//     50% { background-position: 100% 50%; }
+//     100% { background-position: 0% 50%; }
+
+// }
+
+
+// div.ajax-progress.ajax-progress-throbber {
+// 	position:fixed;
+// 	top:0;
+// 	left:0;
+// 	right:0;
+// 	bottom:0;
+// 	width:100%;
+// 	height:100%;
+// 	background: $primary-70;
+// 	z-index:600;
+// 	div.throbber {
+// 		position:fixed;
+// 		float:none;
+// 		background: none;
+// 		@include animation('circles 0.5s linear infinite');
+// 		top:50%;
+// 		left:50%;
+// 		@include rem(margin-left,-1);
+// 		@include rem(margin-top,-1);
+// 		@include rem(width,2);
+// 		@include rem(height,2);
+// 		@include border-radius(50%);
+// 		border: 2px solid $white-30;
+// 		border-bottom:2px solid $white;
+// 	}
+// 	div.message {
+// 		position: fixed;
+// 		top: 52%;
+// 		width: 100%;
+// 		font-family: $title;
+// 		@include font-size(10px);
+// 		@include rem(line-height,2);
+// 		color: $white;
+// 		text-transform: uppercase;
+// 		font-weight: normal;
+// 		text-align: center;
+// 	}
+// }
+
+// // TEXT FIELD THROBBER
+// html.js .form-autocomplete {
+// 	background-image: url('../images/throbber-inactive.png');
+// 	background-position: 99.5% 50%;
+// 	&.throbbing {
+// 		background-image: url('../images/throbber-active.gif');
+// 		background-position: 99.5% 50%;
+// 	}
+// }
+
+// .view-display-id-helpdesk_tickets, #block-views-fd46ca710fe6671f20283c323343834c, #block-views-193a864b587ba6955afd18b64c0ea9a0 {
+// 	position: relative;
+// 	div.ajax-progress.ajax-progress-throbber {
+// 		position: absolute;
+// 		div.throbber, div.message {
+// 			position: absolute;
+// 		}
+// 	}
+// }
+
+// #progress, .progress {
+// 	width: 90%;
+// 	.bar {
+// 		border: 1px solid $borders;	
+// 		background: $backgrounds;
+// 		@include border-radius(0);
+// 	}
+// 	.filled {
+// 		background: $primary-muted;
+// 		@include background(linear-gradient(to right, $primary-muted, lighten($primary-muted, 20) 33%, $primary-muted 66%, lighten($primary-muted, 20)));
+// 		background-size: 400%;
+// 		@include animation('progress 5s ease infinite');
+// 	}
+// }
+
+// /*
+
+// PASTE IN CONSOLE TO KEEP THROBBER VISIBLE
+
+// jQuery( document ).ajaxSend(function() {
+//  i_am_a_dummy_that_doesnt_exists();
+// });
+
+// */

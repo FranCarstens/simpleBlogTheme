@@ -1,0 +1,21 @@
+.submitted {
+	font-family: $title;
+	font-weight: 700;
+	text-align: right;
+	color: lighten($highlight, 0.3);
+	@include font-size(0.83rem);
+	@include line-height(0.83rem);
+	position: absolute;
+	top: (0.5*$vert-spacing);
+	transform:translate(-100%,0);
+	padding-right: 1rem;
+	span {
+		display: block;
+	}
+	.submitted_day {
+		
+	}
+	.submitted_year {
+		
+	}
+}

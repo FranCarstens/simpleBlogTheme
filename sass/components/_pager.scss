@@ -1,0 +1,22 @@
+.item-list{
+	ul.pager {
+		padding: (0.25*$vert-spacing);
+		text-align: right;
+		li {
+			margin: 0;
+			padding: 0 (0.25*$horz-spacing);
+			min-width: (1.5*$horz-spacing);
+			height: (1.5*$vert-spacing);
+			line-height: (1.5*$vert-spacing);
+			text-align: center;
+			display: inline-block;
+			font-weight: 700;
+			&.pager-current {
+				color: $highlight;
+			}
+			a {
+				display: block;
+			}
+		}
+	}
+}
