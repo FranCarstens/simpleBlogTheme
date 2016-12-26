@@ -23,5 +23,8 @@
 		.next a {
 			@include icon('before', true, 'forward')
 		}
+		li.empty {
+			display: none;
+		}
 	}
 }

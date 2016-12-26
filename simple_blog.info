@@ -7,6 +7,7 @@ engine = phptemplate
 stylesheets[all][] = css/styles.css
 
 ; -- SCRIPTS --
+scripts[] = js/custom.js
 
 ; -- REGIONS --
 

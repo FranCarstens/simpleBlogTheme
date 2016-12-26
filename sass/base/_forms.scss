@@ -1,0 +1,42 @@
+label {
+	font-weight: 700;
+	display: block;
+	padding-top: $vert-spacing;
+}
+input {
+	font-family: $body;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	@include font-size(1rem);
+	border: none;
+	border-bottom: 2px solid $text;
+	@include height(2*$vert-spacing);
+	padding: (0.25*$vert-spacing);
+	background: $bg;
+	width: 100%;
+	&:focus {
+		outline: none;
+		border-bottom: 2px solid $highlight;
+	}
+}
+input[type="submit"] {
+	display: inline-block;
+	@include height(2rem);
+	padding: 0 $horz-spacing;
+	@include line-height(2rem);
+	color: white;
+	background: $highlight;
+	margin: $vert-spacing $vert-spacing 0 0;
+	border: none;
+	@include font-size(0.7rem);
+	text-transform: uppercase;
+	cursor: pointer;
+	&:hover, &:active {
+		background: lighten($highlight, 10);
+	}
+}
+.description {
+	@include font-size(0.7rem);
+	// @include line-height(1.7rem);
+}

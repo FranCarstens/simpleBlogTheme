@@ -79,35 +79,37 @@
 
 		<!-- HEADER -->
 		<header id="header">
-			<?php if ($logo): ?>
-				<div id="logo">
-					<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-				</div>
-			<?php endif; ?>
+			<div class="header-wrapper">
+				<?php if ($logo): ?>
+					<div id="logo">
+						<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+					</div>
+				<?php endif; ?>
 
-			<?php if ($site_name || $site_slogan): ?>
-				<div id="name_and_slogan">
-					<?php if ($site_name): ?>
-						<?php if ($title): ?>
-							<div id="site_name">
-								<strong>
+				<?php if ($site_name || $site_slogan): ?>
+					<div id="name_and_slogan">
+						<?php if ($site_name): ?>
+							<?php if ($title): ?>
+								<div id="site_name">
+									<strong>
+										<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+									</strong>
+								</div>
+							<?php else: /* Use h1 when the content title is empty */ ?>
+								<h1 id="site_name">
 									<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-								</strong>
-							</div>
-						<?php else: /* Use h1 when the content title is empty */ ?>
-							<h1 id="site_name">
-								<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-							</h1>
+								</h1>
+							<?php endif; ?>
 						<?php endif; ?>
-					<?php endif; ?>
 
-					<?php if ($site_slogan): ?>
-						<div id="site_slogan"><?php print $site_slogan; ?></div>
-					<?php endif; ?>
-				</div> <!-- /#name-and-slogan -->
-			<?php endif; ?>
+						<?php if ($site_slogan): ?>
+							<div id="site_slogan"><?php print $site_slogan; ?></div>
+						<?php endif; ?>
+					</div> <!-- /#name-and-slogan -->
+				<?php endif; ?>
 
-			<?php print render($page['header']); ?>
+				<?php print render($page['header']); ?>
+			</div>
 		</header>
 
 		<!-- NAVIGATION -->

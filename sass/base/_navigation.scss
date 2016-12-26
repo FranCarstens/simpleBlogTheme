@@ -1,0 +1,54 @@
+#navigation {
+	position: fixed;
+	top: 0;
+	left: -$phone;
+	width: $phone;
+	height: 100vh;
+	background-color: rgba($highlight, 0.9);
+	z-index: 999;
+	padding: 2*$vert-spacing 2*$horz-spacing;
+	transition: left .2s ease-in-out;
+	@include icon('before', true, 'hamburger')
+	cursor: pointer;
+	li {
+		border-bottom: 1px solid $outlines;
+		transition: all 0.2s ease;
+		a {
+			height: 2*$vert-spacing;
+			@include line-height(2*$vert-spacing);
+			font-weight: 700;
+			color: white;
+			display: block;
+			transition: all 0.2s ease;
+		}
+		&:hover {
+			transition: all 0.2s ease;
+			a {
+				transition: all 0.2s ease;
+				padding-left: (0.25*$horz-spacing);
+			}
+		}
+	}
+	&::before {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 2*$vert-spacing;
+		width: 2*$vert-spacing;
+		text-align: center;
+		@include line-height(2rem);
+		@include font-size(2.2rem);
+		font-family: monospace;
+		color: $text;
+		z-index: 1000;		
+	}
+	&.clicked {
+		left: 0;
+		&::before {
+			color: white;
+		}
+	}	
+}
+.admin-menu #navigation::before {
+	top: $vert-spacing;
+}

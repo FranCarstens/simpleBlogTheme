@@ -4,6 +4,7 @@
 			padding-left: $horz-spacing;
 			@include icon('before', true, 'dash')
 			&::before {
+				margin-left: -$horz-spacing;
 				width: $horz-spacing;
 				text-align: center;
 				display: inline-block;

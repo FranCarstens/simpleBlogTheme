@@ -1,0 +1,52 @@
+#search-form {
+	margin-bottom: 2*$vert-spacing;
+	.form-wrapper#edit-basic {
+		position: relative;
+		display: block;
+		margin-bottom: $vert-spacing;
+		@include icon('before', true, 'search')
+		&::before {
+			position: absolute;
+			bottom: 0;
+			right: 0.6rem;
+			@include height(2*$vert-spacing);
+			@include width(2*$horz-spacing);
+			@include line-height(2*$vert-spacing);
+			@include font-size(1.5rem);
+			text-align: center;
+			display: block;
+			@include border-radius(50%);
+			background: $highlight;
+			color: white;
+			&:hover {
+				background: lighten($highlight, 10);
+			}
+		}
+		input[type="text"] {
+			width: calc(100% - 4rem);
+		}
+	}
+	input[type="submit"][value="Search"] {
+		opacity: 0;
+		border: none;
+		margin: 0;
+		@include height(2*$vert-spacing);
+		@include width(2*$horz-spacing);
+		overflow: hidden;
+		cursor: pointer;
+	}
+}
+.search-advanced {
+	width: 100%;
+}
+.search-results {
+	li {
+		h3, span {
+			margin: 0;
+		}
+		span {
+			font-style: italic;
+			color: lighten($text, 25);
+		}
+	}
+}

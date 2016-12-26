@@ -1,9 +1,39 @@
+@include keyframes(blinker) {
+	0% { opacity: 1; }
+	49.5% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
 #header {
-	text-transform: lowercase;
-	max-width: 768px;
-	margin: 0 auto;
-	padding: (2*$vert-spacing) 0;
-	h1, a {
+	padding: (2*$vert-spacing) 0 ($vert-spacing) 0;
+	border-bottom: 1px dashed $text;
+	.header-wrapper {
+		max-width: 768px;
+		margin: 0 auto;
+	}
+	#logo, #name-and-slogan {
+		display: inline-block;
+	}
+	h1 {
+		margin: 0;
+	}
+	a {
+		display: block;
 		font-size: 1rem;
+		font-family: $code;
+		font-weight: 400;
+		text-transform: lowercase;
+		margin-bottom: $vert-spacing;
+		@include line-height(2*$vert-spacing);
+
+	}
+}
+#site_name a span {
+	@include icon('after', true, 'underscore');
+	&::after {
+		font-family: $body;
+		font-weight: 700;
+		@include animation('blinker 1.5s linear infinite');
 	}
 }

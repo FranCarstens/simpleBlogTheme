@@ -1,25 +1,31 @@
-@mixin keyframes($animated) {
-  @-webkit-keyframes ($animated) {
-    @content;
-  }
-  @-moz-keyframes ($animated) {
-    @content;
-  }  
-  @-ms-keyframes ($animated) {
-    @content;
-  }
-  @-o-keyframes ($animated) {
-    @content;
-  }  
-  @keyframes ($animated) {
-    @content;
-  }
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
 }
 
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};      
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
 }

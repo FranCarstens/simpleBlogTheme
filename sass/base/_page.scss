@@ -6,6 +6,9 @@ body {
 	max-width: $tablet;
 	margin: 0 auto;
 }
+.not-front #content {
+	padding: 2*$vert-spacing 0;
+}
 
 hr {
 	margin-top: $vert-spacing;
