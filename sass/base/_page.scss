@@ -7,7 +7,7 @@ body {
 	margin: 0 auto;
 }
 .not-front #content {
-	padding: 2*$vert-spacing 0;
+	@include rem(padding,2*$vert-spacing 0);
 }
 
 hr {
@@ -15,4 +15,13 @@ hr {
 	margin-bottom: $vert-spacing;
 	border: 0;
 	border-top: 1px solid $outlines;
+}
+
+@media #{$media-phone} {
+	#content {
+		@include rem(padding,0 $horz-spacing);
+	}
+	.not-front #content {
+		@include rem(padding,$vert-spacing);
+	}
 }

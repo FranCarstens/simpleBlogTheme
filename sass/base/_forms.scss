@@ -1,18 +1,29 @@
 label {
 	font-weight: 700;
 	display: block;
-	padding-top: $vert-spacing;
+	@include rem(padding-top,$vert-spacing);
 }
-input {
+input, textarea {
 	font-family: $body;
 }
+textarea, .form-textarea-wrapper textarea {
+	@include rem(padding, $vert-spacing);
+	@include rem(font-size, 1rem);
+	@include rem(line-height, 1.7rem);
+	@include rem(margin-top, $vert-spacing);
+	border: none;
+	border-top: 1px dashed $text;
+	border-bottom: 2px solid $text;
+	background: rgba($highlight, 0.05);
+}
+
 
 input[type="text"], input[type="password"], input[type="email"] {
-	@include font-size(1rem);
+	@include rem(font-size,1rem);
+	@include rem(height,2*$vert-spacing);
+	@include rem(padding,0.25*$vert-spacing);
 	border: none;
 	border-bottom: 2px solid $text;
-	@include height(2*$vert-spacing);
-	padding: (0.25*$vert-spacing);
 	background: $bg;
 	width: 100%;
 	&:focus {
@@ -22,21 +33,20 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 input[type="submit"] {
 	display: inline-block;
-	@include height(2rem);
-	padding: 0 $horz-spacing;
-	@include line-height(2rem);
+	@include rem(height,2rem);
+	@include rem(padding,0 $horz-spacing);
+	@include rem(line-height,2rem);
+	@include rem(margin,$vert-spacing $vert-spacing 0 0);
+	@include rem(font-size,0.7rem);
 	color: white;
 	background: $highlight;
-	margin: $vert-spacing $vert-spacing 0 0;
 	border: none;
-	@include font-size(0.7rem);
 	text-transform: uppercase;
 	cursor: pointer;
 	&:hover, &:active {
 		background: lighten($highlight, 10);
 	}
 }
-.description {
-	@include font-size(0.7rem);
-	// @include line-height(1.7rem);
+.description, .filter-help, .filter-guidelines {
+	@include rem(font-size,0.7rem);
 }

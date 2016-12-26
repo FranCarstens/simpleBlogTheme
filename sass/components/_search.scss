@@ -9,15 +9,8 @@
 			position: absolute;
 			bottom: 0;
 			right: 0.6rem;
-			@include height(2*$vert-spacing);
-			@include width(2*$horz-spacing);
-			@include line-height(2*$vert-spacing);
-			@include font-size(1.5rem);
-			text-align: center;
-			display: block;
+			@include icon-button(2*$vert-spacing,$highlight,1.5rem,white);
 			@include border-radius(50%);
-			background: $highlight;
-			color: white;
 			&:hover {
 				background: lighten($highlight, 10);
 			}
@@ -30,9 +23,7 @@
 		opacity: 0;
 		border: none;
 		margin: 0;
-		@include height(2*$vert-spacing);
-		@include width(2*$horz-spacing);
-		overflow: hidden;
+		@include icon-button(2*$vert-spacing)
 		cursor: pointer;
 	}
 }
@@ -44,9 +35,26 @@
 		h3, span {
 			margin: 0;
 		}
+		span, p {
+			text-align: left;
+		}
 		span {
 			font-style: italic;
 			color: lighten($text, 25);
+		}
+	}
+}
+@media #{$media-phone} {
+	#search-form {
+		.form-wrapper#edit-basic {
+			&::before {
+				@include icon-button(1.5*$vert-spacing,$highlight,1rem,white);
+				@include rem(margin,0.25*$vert-spacing 0)
+			}
+		}
+		input[type="submit"][value="Search"] {
+			@include icon-button(1.5*$vert-spacing)
+			@include rem(margin,0.25*$vert-spacing 0)
 		}
 	}
 }

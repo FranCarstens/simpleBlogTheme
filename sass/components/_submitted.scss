@@ -1,21 +1,33 @@
 .submitted {
 	font-family: $title;
 	font-weight: 700;
-	text-align: right;
 	color: lighten($highlight, 0.3);
-	@include font-size(0.83rem);
-	@include line-height(0.83rem);
-	position: absolute;
-	top: (0.5*$vert-spacing);
-	transform:translate(-100%,0);
-	padding-right: 1rem;
-	span {
-		display: block;
-	}
+	@include rem(font-size,0.83rem);
+	@include rem(line-height,0.83rem);
 	.submitted_day {
-		
 	}
 	.submitted_year {
-		
+	}
+}
+
+@media #{$media-phone} {
+	.submitted {
+	}
+}
+@media #{$media-tablet} {
+	.submitted {
+		text-align: right;
+		position: absolute;
+		transform:translate(-100%,0);
+		@include rem(top,0.5*$vert-spacing);
+		@include rem(padding-right,1rem);
+		span {
+			display: block;
+		}
+	}
+	.node-type-blog {
+		.submitted {
+			@include rem(top,3.85rem);
+		}
 	}
 }

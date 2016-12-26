@@ -1,0 +1,24 @@
+
+// create button shapes with perfectly centered text. Esp. icon::before buttons
+// $size required in REM, $background, $font-size, $font-color not required.
+// Requires legacy support mixin
+@mixin icon-button($size, $background:null, $font-size:null, $font-color:null ) {
+
+	@include rem(height,$size);
+	@include rem(width,$size);
+	display: inline-block;
+	text-align: center;
+	overflow: hidden;
+	
+	@if $font-size {
+		@include rem(font-size,$font-size);
+		@include rem(line-height,$size);
+	}
+	@if $font-color {
+		color: $font-color;
+	}
+	@if $background {
+		background: $background;	
+	}
+
+}

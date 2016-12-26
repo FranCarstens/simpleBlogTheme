@@ -6,27 +6,28 @@
 }
 
 #header {
-	padding: (2*$vert-spacing) 0 ($vert-spacing) 0;
 	border-bottom: 1px dashed $text;
 	.header-wrapper {
 		max-width: 768px;
 		margin: 0 auto;
 	}
-	#logo, #name-and-slogan {
+	#logo, #name_and_slogan {
 		display: inline-block;
+	}
+	#logo img {
+		width: auto;
 	}
 	h1 {
 		margin: 0;
 	}
 	a {
 		display: block;
-		font-size: 1rem;
+		@include rem(font-size,1rem);
 		font-family: $code;
 		font-weight: 400;
 		text-transform: lowercase;
-		margin-bottom: $vert-spacing;
-		@include line-height(2*$vert-spacing);
-
+		
+		@include rem(line-height,2*$vert-spacing);
 	}
 }
 #site_name a span {
@@ -35,5 +36,24 @@
 		font-family: $body;
 		font-weight: 700;
 		@include animation('blinker 1.5s linear infinite');
+	}
+}
+@media #{$media-phone} {
+	#header {
+		@include rem(padding, 0 $horz-spacing 0 3*$horz-spacing);
+		.header-wrapper {
+			text-align: right;
+		}
+		h1, a {
+			margin: 0;
+		}
+	}
+}
+@media #{$media-tablet} {
+	#header {
+		@include rem(padding,2*$vert-spacing 0 $vert-spacing);
+		a {
+			@include rem(margin-bottom,$vert-spacing);
+		}
 	}
 }

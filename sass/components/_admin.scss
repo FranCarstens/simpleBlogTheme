@@ -1,0 +1,41 @@
+#blog-node-form {
+	.form-textarea-wrapper {
+		.grippie { display:none; }
+		textarea:hover {
+			outline: 3px solid $highlight;
+			@include box-shadow(0 0 4px $text);
+		}
+		textarea.form-textarea:focus {
+			background-color: rgba(96, 155, 171, .97);
+			color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: 999;
+			@include rem(font-size, 1.1rem);
+			overflow: scroll;
+		}
+	}
+}
+@media #{$media-phone} {
+	#blog-node-form .form-textarea-wrapper textarea.form-textarea:focus {
+		@include rem(padding, $vert-spacing $horz-spacing);
+	}
+}
+@media #{$media-tablet} {
+	#blog-node-form .form-textarea-wrapper textarea.form-textarea:focus {
+		@include rem(padding, 2rem);
+	}
+}
+@media #{$media-narrow} {
+	#blog-node-form .form-textarea-wrapper textarea.form-textarea:focus {
+		padding: 10% 15%;
+	}
+}
+@media #{$media-wide} {
+	#blog-node-form .form-textarea-wrapper textarea.form-textarea:focus {
+		padding: 10% 30%;
+	}
+}

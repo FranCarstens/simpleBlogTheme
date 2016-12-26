@@ -5,3 +5,11 @@
 		position: relative;
 	}
 }
+@media #{$media-phone} {
+	.node-teaser, .node-blog {
+		padding: $vert-spacing 0;
+		header {
+			@include rem(margin-bottom, $vert-spacing);
+		}
+	}
+}

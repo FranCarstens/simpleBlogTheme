@@ -8,8 +8,8 @@
 // * $BASE-TYPOGRAPHY
 // */
 html {
-	font-size: 17px; // set base REM size.
-	@include line-height(1.7rem);
+	@include rem(font-size,1.0625rem); // font-size at 17px
+	@include rem(line-height,1.7rem);
 }
 body {
 	font-family: $body;
@@ -32,19 +32,19 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 700;
 	color: $highlight;
 }
-h1 {@include font-size(3rem); @include line-height(2*$vert-spacing);}
-h2 {@include font-size(2rem); @include line-height(2*$vert-spacing);}
-h3 {@include font-size(1.5rem); @include line-height($vert-spacing);}
-h4 {@include font-size(1.25rem); @include line-height($vert-spacing);}
-h5 {@include font-size(1rem); @include line-height($vert-spacing);}
-h6 {@include font-size(0.83rem); @include line-height($vert-spacing);}
+h1 {@include rem(font-size,3rem); @include rem(line-height,2*$vert-spacing);}
+h2 {@include rem(font-size,2rem); @include rem(line-height,2*$vert-spacing);}
+h3 {@include rem(font-size,1.5rem); @include rem(line-height,$vert-spacing);}
+h4 {@include rem(font-size,1.25rem); @include rem(line-height,$vert-spacing);}
+h5 {@include rem(font-size,1rem); @include rem(line-height,$vert-spacing);}
+h6 {@include rem(font-size,0.83rem); @include rem(line-height,$vert-spacing);}
 
 // /**
 // * $BLOCK ELEMENTS
 // */
 
 h1,h2,h3,h4,h5,h6,p,code,blockquote, ol, ul {
-	margin-bottom: $vert-spacing;
+	@include rem(margin-bottom,$vert-spacing);
 }
 
 // /**
@@ -58,15 +58,17 @@ p {
 // * $QUOTES
 // */
 blockquote {
-	margin-left: $horz-spacing;
-	padding: 0 (2*$horz-spacing) 0 $horz-spacing;
+	@include rem(margin-left,$horz-spacing);
+	@include rem(padding,0 2*$horz-spacing 0 $horz-spacing);
 	border-left: 3px solid $outlines;
 	font-style: italic;
 }
 code {
 	font-family: $code;
-	@include font-size(0.9rem);
 	font-weight: 400;
+}
+pre code {
+	@include rem(font-size,0.8rem);
 }
 // /**
 // * LISTS
@@ -88,3 +90,20 @@ strong {}
 label {}
 .description {}
 .fieldset-description {}
+
+
+
+@media #{$media-phone} {
+	h1 {@include rem(font-size,2.5rem); @include rem(line-height,1.5*$vert-spacing);}
+	h2 {@include rem(font-size,2rem); @include rem(line-height,1.5*$vert-spacing);}
+	h3 {@include rem(font-size,1.5rem); @include rem(line-height,$vert-spacing);}
+	h4 {@include rem(font-size,1.25rem); @include rem(line-height,$vert-spacing);}
+	h5 {@include rem(font-size,1rem); @include rem(line-height,$vert-spacing);}
+	h6 {@include rem(font-size,0.83rem); @include rem(line-height,$vert-spacing);}
+	h1,h2 {
+		@include rem(margin-bottom,0.5*$vert-spacing);
+	}
+	pre code {
+		@include rem(font-size, 0.65rem);
+	}
+}

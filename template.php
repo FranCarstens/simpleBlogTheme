@@ -44,7 +44,7 @@ function simple_blog_css_alter(&$css) {
 		'modules/tracker/tracker.css' => FALSE,
 		'modules/update/update.css' => FALSE,
 		'modules/user/user.css' => FALSE,
-		'misc/vertical-tabs.css' => FALSE,
+		// 'misc/vertical-tabs.css' => FALSE,
 		 
 		// Remove contrib module CSS
 		// drupal_get_path('module', 'views') . '/css/views.css' => FALSE,
