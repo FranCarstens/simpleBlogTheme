@@ -30,7 +30,9 @@ a {
 h1,h2,h3,h4,h5,h6 {
 	font-family: $title;
 	font-weight: 700;
-	color: $highlight;
+}
+h1, h2 {
+	color: $highlight
 }
 h1 {@include rem(font-size,3rem); @include rem(line-height,2*$vert-spacing);}
 h2 {@include rem(font-size,2rem); @include rem(line-height,2*$vert-spacing);}
@@ -76,6 +78,16 @@ pre code {
 
 ol {}
 ul {}
+dl {
+	dt {
+		font-weight: 700;
+	}
+	dd {
+		@include rem(margin, 0.5*$vert-spacing 0 $vert-spacing 0.5*$horz-spacing);
+		@include rem(padding-left, 0.5*$horz-spacing);
+		border-left: 3px solid $highlight;
+	}
+}
 
 // /**
 // * $MARKS

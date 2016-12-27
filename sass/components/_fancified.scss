@@ -1,0 +1,10 @@
+a[href^="http"] {
+	@include icon('before', true, 'location')
+	border-bottom: 1px dashed $highlight;
+	color: $highlight;
+	&::before {
+		color: $highlight;
+		@include rem(font-size, 0.75rem);
+		@include rem(margin-right, 0.25rem);
+	}
+}
