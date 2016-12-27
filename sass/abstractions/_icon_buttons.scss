@@ -22,3 +22,13 @@
 	}
 
 }
+
+@mixin icon-links($size, $font-size:null) {
+	@include rem(width, $size);
+	@include rem(line-height, $size);
+	display: inline-block;
+	text-align: center;
+	@if font-size {
+		@include rem(font-size, $font-size);
+	}
+}

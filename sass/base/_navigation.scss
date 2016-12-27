@@ -6,7 +6,7 @@
 	z-index: 999;
 	@include rem(padding,2*$vert-spacing 2*$horz-spacing);
 	transition: left .2s ease-in-out;
-	@include icon('before', true, 'hamburger')
+	@include icon('before', true, 'menu')
 	cursor: pointer;
 	li {
 		border-bottom: 1px solid $outlines;
@@ -28,16 +28,18 @@
 		}
 	}
 	&::before {
-		@include icon-button(2*$vert-spacing,transparent,2.2rem,highlight)
-		font-family: monospace;
+		@include icon-button(1.5*$vert-spacing,rgba($bg, 0.9),1.5rem,$highlight)
+		@include rem(line-height,2.8rem) // correct line-height for improper icon sizing
 		position: fixed;
-		top: 0;
-		left: 0;
+		@include rem(top, 0.25*$vert-spacing);
+		@include rem(left, 0.25*$horz-spacing);
 		z-index: 1000;		
+		@include border-radius(50%);
 	}
 	&.clicked {
 		&::before {
 			color: white;
+			background: transparent;
 		}
 	}	
 }

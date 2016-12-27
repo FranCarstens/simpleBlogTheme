@@ -1,44 +1,48 @@
-ul.tabs.primary {
-	border-bottom: 1px solid $text;
-	text-align: right;
-	li {
-		display: inline-block;
-
-	}
-	a {
-		height: 2*$vert-spacing;
-		padding: 0 $horz-spacing;
-		line-height: 2*$vert-spacing;
-		// margin-right: 0.5*$horz-spacing;
-		font-size: 0.7rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		display: inline-block;
-		border: 1px dashed $text;
+.tabs {
+	@include rem(margin-bottom, 2*$vert-spacing);
+	ul.tabs.primary {
 		border-bottom: 1px solid $text;
-		transition: all 0.3s ease;
-	}
-	a.active {
-		color: white;
-		border: 1px solid $text;
-		background: $text;
-	}
-	a:hover {
-		transition: all 0.3s ease;
-		color: white;
-		border: 1px dashed $highlight;
-		border-bottom: 1px solid $text;
-		background: $highlight;
-	}
+		text-align: right;
+		li {
+			display: inline-block;
 
+		}
+		a {
+			height: 2*$vert-spacing;
+			padding: 0 $horz-spacing;
+			line-height: 2*$vert-spacing;
+			// margin-right: 0.5*$horz-spacing;
+			font-size: 0.7rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			display: inline-block;
+			border: 1px dashed $text;
+			border-bottom: 1px solid $text;
+			transition: all 0.3s ease;
+		}
+		a.active {
+			color: white;
+			border: 1px solid $text;
+			background: $text;
+		}
+		a:hover {
+			transition: all 0.3s ease;
+			color: white;
+			border: 1px dashed $highlight;
+			border-bottom: 1px solid $text;
+			background: $highlight;
+		}
+	}
 }
 @media #{$media-phone} {
-	ul.tabs.primary {
-		li {
-			display:block;
-			@include rem(padding,0 0.25*$horz-spacing);
-			a {
-				width: 100%;
+	.tabs {
+		ul.tabs.primary {
+			li {
+				display:block;
+				@include rem(padding,0 0.25*$horz-spacing);
+				a {
+					width: 100%;
+				}
 			}
 		}
 	}

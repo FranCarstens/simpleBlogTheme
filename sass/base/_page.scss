@@ -14,7 +14,7 @@ hr {
 	margin-top: $vert-spacing;
 	margin-bottom: $vert-spacing;
 	border: 0;
-	border-top: 1px solid $outlines;
+	border-top: 1px dashed $text;
 }
 
 @media #{$media-phone} {

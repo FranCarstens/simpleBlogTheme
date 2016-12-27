@@ -104,10 +104,14 @@
 			// We hide the comments and links now so that we can render them later.
 		hide($content['comments']);
 		hide($content['links']);
+		hide($content['field_tags']);
 		print render($content);
 		?>
 	</section>
-	<footer class="links"><?php print render($content['links']); ?></footer>
+	<footer class="links">
+		<?php print render($content['field_tags']); ?>
+		<?php print render($content['links']); ?>	
+	</footer>
 	<?php if ($content['comments']): ?>
 		<section class="comments"><?php print render($content['comments']); ?></section>
 	<?php endif; ?>

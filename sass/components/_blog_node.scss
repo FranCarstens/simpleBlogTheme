@@ -2,13 +2,21 @@
 	#content {
 		position: relative;
 		.node-blog {
-			.content {
+			section.content {
 				@include rem(padding-bottom,2*$vert-spacing);
 				border-bottom: 1px solid $text;
+			}
+			footer {
+				@include rem(padding, $vert-spacing 0);
 				.field-type-taxonomy-term-reference {
 					width: 75%;
 					float: left;
+					@include rem(margin-bottom, $vert-spacing);
 					@include icon('before', true, 'tag')
+					
+					&::before {
+						@include icon-links($vert-spacing, 1rem);	
+					}
 					.field-label {
 						display: none;
 					}
@@ -27,6 +35,24 @@
 								text-transform: lowercase;
 							}
 						}
+					}
+				}
+				.links.inline {
+					width: 25%;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+@media #{$media-phone} {
+	.node-type-blog {
+		#content {
+			.node-blog {
+				footer {
+					.field-type-taxonomy-term-reference, .links.inline {
+						width: 100%;
+						text-align: left;
 					}
 				}
 			}

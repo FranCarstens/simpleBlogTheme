@@ -1,0 +1,31 @@
+table {
+	width: 100%;
+	border: 1px solid $outlines;
+	@include rem(margin-bottom, $vert-spacing);
+	th, td {
+		@include rem(padding, 0.5*$vert-spacing 0.5*$horz-spacing);
+		border-bottom: 1px solid $outlines;
+		border-right: 1px dashed $outlines;
+		&:last-child {
+			border-right: none;
+		}
+	}
+	thead {
+		background: white;
+		color: $highlight;
+		tr {
+
+		}
+		th{
+
+		}
+	}
+	tbody {
+		tr {
+
+		}
+		td {
+
+		}
+	}
+}

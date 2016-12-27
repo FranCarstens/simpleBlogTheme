@@ -1,23 +1,19 @@
-.node-teaser {
+.node-teaser, .node {
 	footer {
 		ul.links.inline {
 			font-size:0.6rem;
 			font-weight: 700;
 			text-transform: uppercase;
-			height: $vert-spacing;
+			@include rem(height, $vert-spacing);
 			&, li, a {
 				display:inline-block;
 				padding: 0;
 			}
 			li {
-				margin-right: $horz-spacing;
+				@include rem(margin-right, $horz-spacing);
 			
 			a::before {
-				@include font-size(1rem);
-				line-height: $vert-spacing;
-				width: $horz-spacing;
-				text-align: center;
-				display: inline-block;
+				@include icon-links($vert-spacing, 1rem);
 			}}
 		}
 		.node-readmore a {
