@@ -8,18 +8,22 @@ Some included theme building tools are SASS support, Autoprefixing, Compass SASS
 
 The theme includes a number of pretty neat features which include:
 
-Social Media Links
-: Customizable social media links on the theme's settings page.
+### Social Media Links
+Customizable social media links on the theme's settings page.
 
-Distraction free writing
-: Tab in and out of a distraction free writing environment. For the best experience use [markdown](https://www.drupal.org/project/markdown).  
-  Don't like it? simple comment out sass/components/_admin.scss
+### Distraction free writing
+Tab in and out of a distraction free writing environment. For the best experience use [markdown](https://www.drupal.org/project/markdown).
 
-Super simple media queries
-: Mobile first media queries are ready to go in mobile only, tablet, narrow, normal and wide sizes. Instead of writing out long, complex queries, simply add `@media #{$media-phone}` and your ready to style mobile only queries. Prefer different breakpoints? Simply edit _grid.scss to suit your needs.
+Don't like it? simple comment out sass/components/_admin.scss
 
-Instant theme updates
-: Quickly update global colors, fonts and even spacing by changing the variables in _colors.scss, _grid.scss, _typography.scss
+### Super simple media queries
+
+Mobile first media queries are ready to go in mobile only, tablet, narrow, normal and wide sizes. Instead of writing out long, complex queries, simply add `@media #{$media-phone}` and your ready to style mobile only queries.
+
+Prefer different breakpoints? Simply edit _grid.scss to suit your needs.
+
+### Instant theme updates
+Quickly update global colors, fonts and even spacing by changing the variables in _colors.scss, _grid.scss, _typography.scss
 
 ##Todo
 
