@@ -41,7 +41,7 @@
 // 		top: 52%;
 // 		width: 100%;
 // 		font-family: $title;
-// 		@include font-size(10px);
+// 		@include rem(font-size,10px);
 // 		@include rem(line-height,2);
 // 		color: $white;
 // 		text-transform: uppercase;
