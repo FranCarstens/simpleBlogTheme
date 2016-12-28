@@ -9,7 +9,7 @@ Some included theme building tools are SASS support, Autoprefixing, Compass SASS
 The theme includes a number of pretty neat features which include:
 
 ### Social Media Links
-Customizable social media links on the theme's settings page.
+Customizable social media links on the theme's settings page. Website, Linkedin, Github, Facebook, Twitter, Instagram and Youtube supported by default. Easily add your own.
 
 ### Distraction free writing
 Tab in and out of a distraction free writing environment. For the best experience use [markdown](https://www.drupal.org/project/markdown).
