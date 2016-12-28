@@ -14,16 +14,22 @@ Customizable social media links on the theme's settings page.
 ### Distraction free writing
 Tab in and out of a distraction free writing environment. For the best experience use [markdown](https://www.drupal.org/project/markdown).
 
-Don't like it? simple comment out sass/components/_admin.scss
+Don't like it? Simply comment out sass/components/_admin.scss
 
 ### Super simple media queries
 
-Mobile first media queries are ready to go in mobile only, tablet, narrow, normal and wide sizes. Instead of writing out long, complex queries, simply add `@media #{$media-phone}` and your ready to style mobile only queries.
+Mobile first media queries are ready to go in mobile only, tablet, narrow, normal and wide sizes. Instead of writing out long, complex queries, simply add `@media #{$media-phone}` and you're ready to style mobile only queries.
 
 Prefer different breakpoints? Simply edit _grid.scss to suit your needs.
 
 ### Instant theme updates
 Quickly update global colors, fonts and even spacing by changing the variables in _colors.scss, _grid.scss, _typography.scss
+
+### Rem mixins
+Support rem and pixels units for older browsers by using a super simple rem mixin `@include rem(property, values)`
+
+### Quick Buttons
+Add square or round buttons with ease by using the icon mixin `@include icon_button(size in rem, background-color, font-size in rem, font-color)`
 
 ##Todo
 
