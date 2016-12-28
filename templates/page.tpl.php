@@ -71,6 +71,7 @@
  *
  * @ingroup themeable
  */
+
 ?>
 
 
@@ -154,7 +155,32 @@
 
 		<!-- FOOTER -->
 		<footer id="footer">
-			<?php print render($page['footer']); ?>
+			<div id="footer-wrapper">
+				<ul class="social_links">
+					<?php if (theme_get_setting('social_website')): ?>
+						<li><a class="social_website" href="<?php print theme_get_setting('social_website'); ?>">Website</a></li>
+					<?php endif; ?>
+					<?php if (theme_get_setting('social_linkedin')): ?>
+						<li><a class="social_linkedin" href="<?php print theme_get_setting('social_linkedin'); ?>">LinkedIn</a></li>
+					<?php endif; ?>
+					<?php if (theme_get_setting('social_github')): ?>
+						<li><a class="social_github" href="<?php print theme_get_setting('social_github'); ?>">GitHub</a></li>
+					<?php endif; ?>
+					<?php if (theme_get_setting('social_facebook')): ?>
+						<li><a class="social_facebook" href="<?php print theme_get_setting('social_facebook'); ?>">Facebook</a></li>
+					<?php endif; ?>
+					<?php if (theme_get_setting('social_twitter')): ?>
+						<li><a class="social_twitter" href="<?php print theme_get_setting('social_twitter'); ?>">Twitter</a></li>
+					<?php endif; ?>
+					<?php if (theme_get_setting('social_instagram')): ?>
+						<li><a class="social_instagram" href="<?php print theme_get_setting('social_instagram'); ?>">Instagram</a></li>
+					<?php endif; ?>
+					<?php if (theme_get_setting('social_youtube')): ?>
+						<li><a class="social_youtube" href="<?php print theme_get_setting('social_youtube'); ?>">Youtube</a></li>
+					<?php endif; ?>
+				<ul>
+				<?php print render($page['footer']); ?>
+			</div>
 		</footer>
 
 	</div>

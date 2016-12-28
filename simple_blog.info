@@ -19,6 +19,11 @@ regions[footer] = 'Footer'
 
 ; -- THEME SETTINGS --
 ; - SOCIAL LINKS
-; settings[social_facebook] = 'https://www.facebook.com'
-; settings[social_twitter] = 'https://twitter.com'
-; settings[social_github] = 'https://github.com'
+
+settings[social_website] = ''
+settings[social_linkedin] = ''
+settings[social_github] = ''
+settings[social_facebook] = ''
+settings[social_twitter] = ''
+settings[social_instagram] = ''
+settings[social_youtube] = ''

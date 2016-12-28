@@ -4,15 +4,15 @@
 // Requires legacy support mixin
 @mixin icon-button($size, $background:null, $font-size:null, $font-color:null ) {
 
-	@include rem(height,$size);
-	@include rem(width,$size);
+	@include rem(height, $size);
+	@include rem(width, $size);
 	display: inline-block;
 	text-align: center;
 	overflow: hidden;
 	
 	@if $font-size {
-		@include rem(font-size,$font-size);
-		@include rem(line-height,$size);
+		@include rem(font-size, $font-size);
+		@include rem(line-height, $size);
 	}
 	@if $font-color {
 		color: $font-color;
@@ -24,11 +24,15 @@
 }
 
 @mixin icon-links($size, $font-size:null) {
+
 	@include rem(width, $size);
+	@include rem(height, $size);
 	@include rem(line-height, $size);
 	display: inline-block;
 	text-align: center;
-	@if font-size {
+	overflow: hidden;
+
+	@if $font-size {
 		@include rem(font-size, $font-size);
 	}
 }

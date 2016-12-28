@@ -1,0 +1,12 @@
+#footer {
+	border-top: 1px dashed $text;
+	color: white;
+	@include rem(padding, 2*$vert-spacing 0 3*$vert-spacing 0);
+	#footer-wrapper {
+			max-width: $tablet;
+			margin: 0 auto;
+		ul {
+			text-align: center;
+		}
+	}
+}

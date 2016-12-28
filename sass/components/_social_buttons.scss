@@ -1,0 +1,24 @@
+.social_links {
+	li {
+		display: inline-block;
+		@include rem(padding, 0.25*$vert-spacing 0.25*$horz-spacing);
+	}
+	a[class^="social_"], a[class*=" social_"] {
+		@include icon_links(1.5*$vert-spacing);
+		&::before {
+			@include icon_button(1.5*$vert-spacing, $highlight, 1rem, white);
+			@include border-radius(50%);
+		}
+		&:hover::before {
+			background-color: lighten($highlight, 10)
+		}
+	}
+}
+
+a[class*="github"] {@include icon('before', true, 'github')};
+a[class*="linkedin"] {@include icon('before', true, 'linkedin')};
+a[class*="website"] {@include icon('before', true, 'website')};
+a[class*="twitter"] {@include icon('before', true, 'twitter')};
+a[class*="instagram"] {@include icon('before', true, 'instagram')};
+a[class*="youtube"] {@include icon('before', true, 'youtube')};
+a[class*="facebook"] {@include icon('before', true, 'facebook')};
