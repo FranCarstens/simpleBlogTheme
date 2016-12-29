@@ -1,6 +1,7 @@
 .social_links {
 	li {
 		display: inline-block;
+		vertical-align: middle;
 		@include rem(padding, 0.25*$vert-spacing 0.25*$horz-spacing);
 	}
 	a[class^="social_"], a[class*=" social_"] {

@@ -7,6 +7,7 @@
 	@include rem(height, $size);
 	@include rem(width, $size);
 	display: inline-block;
+	vertical-align: middle;
 	text-align: center;
 	overflow: hidden;
 	
@@ -27,8 +28,8 @@
 
 	@include rem(width, $size);
 	@include rem(height, $size);
-	@include rem(line-height, $size);
 	display: inline-block;
+	vertical-align: middle;
 	text-align: center;
 	overflow: hidden;
 

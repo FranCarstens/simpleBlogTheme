@@ -7,6 +7,7 @@
 			@include rem(height, $vert-spacing);
 			&, li, a {
 				display:inline-block;
+				vertical-align: middle;
 				padding: 0;
 			}
 			li {

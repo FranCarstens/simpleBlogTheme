@@ -23,6 +23,7 @@
 					.field-items {
 						float: none;
 						display: inline-block;
+						vertical-align: middle;
 						@include rem(font-size,0.75rem);
 						@include rem(line-height,$vert-spacing);
 						.field-item {
@@ -30,6 +31,7 @@
 							@include rem(padding,0 0.25*$horz-spacing);
 							@include rem(height,$vert-spacing);
 							display: inline-block;
+							vertical-align: middle;
 							a {
 								display: block;
 								text-transform: lowercase;

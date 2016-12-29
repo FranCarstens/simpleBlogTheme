@@ -7,11 +7,13 @@
 		li {
 			padding: 0;
 			display: inline-block;
+			vertical-align: middle;
 		}
 		a, a::before {
 			width: $horz-spacing;
 			height: $vert-spacing;
 			display:inline-block;
+			vertical-align: middle;
 			overflow: hidden;
 			text-align: center;
 			line-height: $vert-spacing;

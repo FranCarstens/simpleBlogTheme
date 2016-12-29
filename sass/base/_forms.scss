@@ -1,6 +1,7 @@
 label {
 	font-weight: 700;
 	display: inline-block;
+	vertical-align: middle;
 	@include rem(padding-top,$vert-spacing);
 }
 input, textarea {
@@ -33,6 +34,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 input[type="submit"] {
 	display: inline-block;
+	vertical-align: middle;
 	@include rem(height,2rem);
 	@include rem(padding,0 $horz-spacing);
 	@include rem(line-height,2rem);
