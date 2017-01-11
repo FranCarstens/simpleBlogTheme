@@ -27,7 +27,6 @@
 		font-family: $code;
 		font-weight: 400;
 		text-transform: lowercase;
-		
 		@include rem(line-height,2*$vert-spacing);
 	}
 }
@@ -39,7 +38,7 @@
 		@include animation('blinker 1.5s linear infinite');
 	}
 }
-@media #{$media-phone} {
+// @media #{$media-phone} {
 	#header {
 		@include rem(padding, 0 $horz-spacing 0 3*$horz-spacing);
 		.header-wrapper {
@@ -49,10 +48,14 @@
 			margin: 0;
 		}
 	}
-}
-@media #{$media-tablet} {
+// }
+@media (min-width: 891px) {
+	// re-align the header text after awkward sizes
 	#header {
 		@include rem(padding,2*$vert-spacing 0 $vert-spacing);
+		.header-wrapper {
+			text-align: left;
+		}
 		a {
 			@include rem(margin-bottom,$vert-spacing);
 		}

@@ -1,10 +1,18 @@
 @mixin rem($property, $values) {
-  $remval: ();
-  $pxval: ();
-  @each $val in $values {
-    $remval: join($remval, $val);
-    $pxval: join($pxval, $val/1rem*$base-font-size);
-  }
-  #{$property}: $remval;
-  #{$property}: $pxval;
+	$remval: ();
+	$pxval: ();
+	@each $val in $values {
+		$remval: join($remval, $val);
+		@if $val > 0 {
+			$pxval: join($pxval, $val/1rem*$base-font-size);
+		}
+		@else if $val = 0 {
+			$pxval: join($pxval, 0);
+		}
+		@else {
+			$pxval: $pxval;
+		}
+	}
+	#{$property}: $remval;
+	#{$property}: $pxval;
 }

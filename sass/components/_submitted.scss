@@ -14,13 +14,14 @@
 	.submitted {
 	}
 }
-@media #{$media-tablet} {
+@media (min-width: 891px) {
+	// properly position the submitted data after the awkward phase
 	.submitted {
 		text-align: right;
 		position: absolute;
 		transform:translate(-100%,0);
-		@include rem(top,0.5*$vert-spacing);
-		@include rem(padding-right,1rem);
+		@include rem(top, 0.5*$vert-spacing);
+		@include rem(padding-right, 1rem);
 		span {
 			display: block;
 		}
@@ -29,5 +30,11 @@
 		.submitted {
 			@include rem(top,3.85rem);
 		}
+	}
+}
+@media (max-width: 890px) {
+	// proper margins for awkward headers.
+	header.article_header {
+		@include rem(margin-bottom, 1rem);
 	}
 }

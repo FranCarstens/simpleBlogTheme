@@ -4,12 +4,23 @@
 	header {
 		position: relative;
 	}
+	section.content {
+		@include rem(margin-top, $vert-spacing*2);
+	}
 }
 @media #{$media-phone} {
 	.node-teaser, .node-blog {
 		padding: $vert-spacing 0;
 		header {
 			@include rem(margin-bottom, $vert-spacing);
+		}
+	}
+}
+@media (max-width: 890px) {
+	//let's fix header margins for awkward sizing
+	.node-type-blog {
+		h2 {
+			margin-bottom: 0;
 		}
 	}
 }

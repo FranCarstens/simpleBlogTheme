@@ -3,7 +3,8 @@
 		position: relative;
 		.node-blog {
 			section.content {
-				@include rem(padding-bottom,2*$vert-spacing);
+				@include rem(margin-top, $vert-spacing*2);
+				@include rem(padding-bottom, 2*$vert-spacing);
 				border-bottom: 1px solid $text;
 			}
 			footer {
@@ -60,4 +61,7 @@
 			}
 		}
 	}
+}
+@media (max-width: 890px) {
+	// awkwardness averted
 }

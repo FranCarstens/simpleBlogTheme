@@ -5,6 +5,7 @@ body {
 #content {
 	max-width: $tablet;
 	margin: 0 auto;
+	@include rem(padding,0 $horz-spacing);
 }
 .not-front #content {
 	@include rem(padding,2*$vert-spacing 0);
@@ -17,7 +18,8 @@ hr {
 	border-top: 1px dashed $text;
 }
 
-@media #{$media-phone} {
+@media (max-width: 890px) {
+	//let's fix edge padding for awkward sizing.
 	#content {
 		@include rem(padding,0 $horz-spacing);
 	}

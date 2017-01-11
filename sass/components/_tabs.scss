@@ -1,5 +1,5 @@
 .tabs {
-	@include rem(margin-bottom, 2*$vert-spacing);
+	// @include rem(margin-bottom, 2*$vert-spacing);
 	ul.tabs.primary {
 		border-bottom: 1px solid $text;
 		text-align: right;
